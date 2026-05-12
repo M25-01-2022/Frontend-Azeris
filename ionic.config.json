@@ -1,0 +1,7 @@
+{
+  "name": "azeris-ranking",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
