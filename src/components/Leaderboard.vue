@@ -1,5 +1,8 @@
 <template>
     <ion-page>
+        <button class="back-button" @click="$router.push('/azeris/home')">
+            ←
+        </button>
         <ion-content class="leaderboard-page">
             <div class="hero">
                 <div class="hero-overlay"></div>
@@ -194,5 +197,29 @@ function format(player) {
 .player-info p {
     margin-top: 5px;
     color: #94a3b8;
+}
+
+.back-button {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    border: 1px solid rgba(122,255,178,0.15);
+    background: rgba(10,20,14,0.95);
+    color: #7affb2;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999;
+    transition: 0.25s ease;
+    box-shadow: 0 0 20px rgba(26,255,124,0.08);
+}
+
+.back-button:hover {
+    transform: translateX(-4px);
+    background: rgba(26,255,124,0.12);
+    border-color: rgba(122,255,178,0.35);
 }
 </style>

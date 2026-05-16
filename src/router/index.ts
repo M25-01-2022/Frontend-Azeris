@@ -4,27 +4,31 @@ import TabsPage from '../views/TabsPage.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    redirect: '/azeris/points'
+    path: '',
+    redirect: '/azeris/home'
+  },
+  {
+    path: '/azeris/home',
+    name: 'home',
+    component: () => import('@/views/HomeView.vue')
   },
   {
     path: '/azeris/',
     component: TabsPage,
     children: [
       {
-        path: '',
-        redirect: '/azeris/points'
-      },
-      {
         path: 'points',
+        name: 'points',
         component: () => import('@/views/PointsView.vue')
       },
       {
         path: 'kills',
+        name: 'kills',
         component: () => import('@/views/KillsView.vue')
       },
       {
         path: 'time',
+        name: 'time',
         component: () => import('@/views/TimeView.vue')
       }
     ]
