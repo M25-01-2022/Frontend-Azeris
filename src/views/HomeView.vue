@@ -22,15 +22,12 @@
                         target="_blank">
                             Descargar para Windows
                         </ion-button>
-                    
-                        <!-- LINK DESCARGA LINUX -->
                         <ion-button 
                             class="linux-btn"
                             href="/downloads/AzerisUbuntuVer.zip"
                             target="_blank">
                             Descargar para Linux
                         </ion-button>
-
                         <ion-button 
                             fill="outline" 
                             class="ranking-btn"
@@ -44,6 +41,15 @@
                             🎮 Página Oficial
                         </ion-button>
                     </div>
+                    <p class="linux-warning">
+                        ⚠️ Usuarios de Linux:
+                        después de descargar el juego, abre una terminal en la carpeta <b>/bin</b>
+                        y ejecuta el siguiente comando para dar permisos al ejecutable:
+                        <br><br>
+                        <code>sudo chmod +x AzerisUbuntuVer</code>
+                        <br><br>
+                        Y con eso ya podrás jugar sin problemas. ¡Disfruta la aventura!
+                    </p>
                     <div class="platforms">
                         Disponible para Windows y Linux
                     </div>
@@ -286,6 +292,29 @@ import NavigationBar from '../components/NavigationBar.vue'
 .itch-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 30px rgba(250,92,92,0.3);
+}
+
+.linux-warning {
+    margin-top: 25px;
+    max-width: 700px;
+    padding: 18px 22px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(122,255,178,0.12);
+    border-radius: 16px;
+    color: #9fdcb8;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.linux-warning code {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 14px;
+    background: #0b120f;
+    border-radius: 10px;
+    color: #7affb2;
+    font-family: monospace;
+    font-size: 0.95rem;
 }
 
 .badges {
